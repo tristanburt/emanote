@@ -1,25 +1,22 @@
-
+<html lang='en'>
 
 <head>
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
-  
-    <base href='/' />
-  
   <title>Demo – Emanote Demos</title>
-  
-    <meta property='og:description' content='Emanote -- Markdown static site generator and live server. Supports
-Wiki-links, directories, HTML templates for complete theming.
-' />
-    <meta property='og:site_name' content='Emanote' />
-  
+  <with var='page'>
+    <meta property='og:description' content='${value:description}' />
+    <meta property='og:site_name' content='${value:siteName}' />
+  </with>
   <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
 twindObserve.observe(document.documentElement)</script>
   
-    <link href='/favicon.svg' rel='icon' />
+    
+      <base href='/' />
+      <link href='/favicon.svg' rel='icon' />
+    
   
-  <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
-<script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+  <snippet var='page.headHtml'></snippet>
 </head>
 
 <body>
@@ -37,7 +34,9 @@ twindObserve.observe(document.documentElement)</script>
         <div class='flex items-end h-full pl-2 mt-2 space-x-2'>
           <a href=''>
             
-              <img class='z-50 h-20 transition transform hover:scale-125 hover:opacity-80' src='/favicon.svg' />
+              
+                <img class='z-50 h-20 transition transform hover:scale-125 hover:opacity-80' src='/favicon.svg' />
+              
             
           </a>
         </div>
@@ -258,7 +257,11 @@ twindObserve.observe(document.documentElement)</script>
 
         <note-meta>
           <div class='flex items-center justify-center mt-8 space-x-2 font-mono text-sm'>
-            
+            <with var='tags'>
+              <a title='Tag' class='px-1 bg-gray-100 rounded'>
+                <value></value>
+              </a>
+            </with>
           </div>
         </note-meta>
 
@@ -272,3 +275,4 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 </body>
 
+</html>
