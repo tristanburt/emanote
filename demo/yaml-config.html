@@ -3,7 +3,9 @@
 <head>
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
-  <title>YAML configuration – Emanote Demos</title>
+  <title>
+    YAML configuration – Emanote Demos
+  </title>
   <with var='page'>
     <meta property='og:description' content='${value:description}' />
     <meta property='og:site_name' content='${value:siteName}' />
@@ -17,48 +19,48 @@ twindObserve.observe(document.documentElement)</script>
     
   
   <snippet var='page.headHtml'></snippet>
+  <head-extra></head-extra>
 </head>
 
-<body>
-  <!-- 
-    Just defining a convenient alias, to avoid <with>'ing
-    NOTE: There must not be any whitespace inside this tag! 
-  -->
+<body class='overflow-y-scroll'>
+  <!-- DoNotFormat -->
   
+  <!-- DoNotFormat -->
 
-  <div class='container mx-auto xl:max-w-screen-lg'>
-    <!-- Header row-->
-    <div class='grid grid-cols-12 px-2'>
-      <!-- Logo column -->
-      <div class='hidden md:mr-4 md:block md:col-span-3'>
-        <div class='flex items-end h-full pl-2 mt-2 space-x-2'>
-          <a href=''>
-            
+  
+    <div class='container mx-auto xl:max-w-screen-lg'>
+      <!-- Header row-->
+      <div class='grid grid-cols-12 px-2'>
+        <!-- Logo column -->
+        <div class='hidden md:mr-4 md:block md:col-span-3'>
+          <div class='flex items-end h-full pl-2 mt-2 space-x-2'>
+            <a href=''>
               
-                <img class='z-50 h-20 transition transform hover:scale-125 hover:opacity-80' src='/favicon.svg' />
+                
+                  <img class='z-50 h-20 transition transform hover:scale-125 hover:opacity-80' src='/favicon.svg' />
+                
               
-            
-          </a>
+            </a>
+          </div>
+        </div>
+        <!-- Title column -->
+        <div class='col-span-12 md:col-span-9'>
+
+          <div class='flex items-center justify-center'>
+            <h1 class='pb-2 mt-2 mb-2 text-6xl text-center'>
+              YAML configuration
+            </h1>
+          </div>
         </div>
       </div>
-      <!-- Title column -->
-      <div class='col-span-12 md:col-span-9'>
 
-        <div class='flex items-center justify-center'>
-          <h1 class='pb-2 mt-2 mb-2 text-6xl text-center'>
-            YAML configuration
-          </h1>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main row-->
-    <div class='grid grid-cols-12 px-2'>
-      <!-- Sidebar column -->
-      <div class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
-        <div class='pt-1 pb-2 rounded bg-green-50'>
-          
-            <!-- Variable bindings for this tree-->
+      <!-- Main row-->
+      <div class='grid grid-cols-12 px-2'>
+        <!-- Sidebar column -->
+        <div class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
+          <div class='pt-1 pb-2 rounded bg-green-50'>
+            
+              <!-- Variable bindings for this tree-->
 
   
 
@@ -89,8 +91,8 @@ twindObserve.observe(document.documentElement)</script>
   -->
   
 </div>
-          
-            <!-- Variable bindings for this tree-->
+            
+              <!-- Variable bindings for this tree-->
 
   
 
@@ -121,8 +123,8 @@ twindObserve.observe(document.documentElement)</script>
   -->
   
 </div>
-          
-            <!-- Variable bindings for this tree-->
+            
+              <!-- Variable bindings for this tree-->
 
   
 
@@ -220,23 +222,22 @@ twindObserve.observe(document.documentElement)</script>
     
   
 </div>
-          
+            
+          </div>
         </div>
-      </div>
-      <!-- Main body column -->
-      <div class='col-span-12 md:col-span-9'>
-        <p class='my-3'>Configure your site metadata, rendering configuration and such using YAML configuration. Create a <code class='py-0.5 bg-gray-100 text-sm'>foo.yaml</code> alongside <code class='py-0.5 bg-gray-100 text-sm'>foo.md</code> or <code class='py-0.5 bg-gray-100 text-sm'>foo/</code> folder, and those settings apply only to that route. The YAML structure is the same as your Markdown frontmatter, and vice-versa. Settings in the YAML frontmatter apply onto that Markdown route only; whereas settings in an individual .yaml file apply to that entire sub-route tree. Emanote does a deep-merge of the parent YAML configurations, so you can have children override only what’s necessary. This is sometimes known as <a href='https://www.11ty.dev/docs/data-cascade/' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>“data cascade”</a>. The final merged YAML structure is passed to the HTML templates, of which you have full rendering control over.</p><p class='my-3'>Notice how this page’s sidebar colorscheme has <span class='bg-green-100 text-green-700 font-bold text-3xl'>changed to green</span>? View <a href='https://github.com/srid/emanote/blob/master/docs/demo/yaml-config.md' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>the source of this page</a> to see the magic involved. That CSS greenery you just saw too comes from YAML.</p><p class='my-3'>For another example, notice how the demo section of this website has a different base site title (see <code class='py-0.5 bg-gray-100 text-sm'>demo.yaml</code> for the underlying configuration).</p>
-        
+        <!-- Main body column -->
+        <div class='col-span-12 md:col-span-9'>
+          <p class='my-3'>Configure your site metadata, rendering configuration and such using YAML configuration. Create a <code class='py-0.5 bg-gray-100 text-sm'>foo.yaml</code> alongside <code class='py-0.5 bg-gray-100 text-sm'>foo.md</code> or <code class='py-0.5 bg-gray-100 text-sm'>foo/</code> folder, and those settings apply only to that route. The YAML structure is the same as your Markdown frontmatter, and vice-versa. Settings in the YAML frontmatter apply onto that Markdown route only; whereas settings in an individual .yaml file apply to that entire sub-route tree. Emanote does a deep-merge of the parent YAML configurations, so you can have children override only what’s necessary. This is sometimes known as <a href='https://www.11ty.dev/docs/data-cascade/' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>“data cascade”</a>. The final merged YAML structure is passed to the HTML templates, of which you have full rendering control over.</p><p class='my-3'>Notice how this page’s sidebar colorscheme has <span class='bg-green-100 text-green-700 font-bold text-3xl'>changed to green</span>? View <a href='https://github.com/srid/emanote/blob/master/docs/demo/yaml-config.md' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>the source of this page</a> to see the magic involved. That CSS greenery you just saw too comes from YAML.</p><p class='my-3'>For another example, notice how the demo section of this website has a different base site title (see <code class='py-0.5 bg-gray-100 text-sm'>demo.yaml</code> for the underlying configuration).</p>
+          
 
-        
-  <div class='w-full p-4 mt-4 text-gray-600 bg-gray-100'>
-    <header class='mb-2 text-xl font-semibold text-gray-500'>You are here</header>
+          
+  <div class='w-full p-4 mt-4 text-gray-700 bg-green-500 rounded'>
     <div class='flex justify-center'>
       <div class='w-full py-2 rounded'>
-        <ul class='flex text-sm text-gray-500 lg:text-base'>
+        <ul class='flex text-sm lg:text-base'>
           
             <li class='inline-flex items-center'>
-              <a class='px-1 font-bold bg-green-500 rounded text-gray-50' href=''>
+              <a class='px-1 font-bold bg-gray-100 rounded' href=''>
                 Emanote
               </a>
               <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
@@ -245,7 +246,7 @@ twindObserve.observe(document.documentElement)</script>
             </li>
           
             <li class='inline-flex items-center'>
-              <a class='px-1 font-bold bg-green-500 rounded text-gray-50' href='demo'>
+              <a class='px-1 font-bold bg-gray-100 rounded' href='demo'>
                 Demo
               </a>
               <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
@@ -253,7 +254,7 @@ twindObserve.observe(document.documentElement)</script>
               </svg>
             </li>
           
-          <li class='inline-flex items-center text-gray-600'>
+          <li class='inline-flex items-center text-gray-200 font-bold'>
             <a>
               YAML configuration
             </a>
@@ -264,24 +265,25 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-        <note-meta>
-          <div class='flex items-center justify-center mt-8 space-x-2 font-mono text-sm'>
-            <with var='tags'>
-              <a title='Tag' class='px-1 bg-gray-100 rounded'>
-                <value></value>
-              </a>
-            </with>
-          </div>
-        </note-meta>
+          <note-meta>
+            <div class='flex items-center justify-center mt-8 space-x-2 font-mono text-sm'>
+              <with var='tags'>
+                <a title='Tag' class='px-1 bg-gray-100 rounded'>
+                  <value></value>
+                </a>
+              </with>
+            </div>
+          </note-meta>
 
-        <footer class='flex items-center justify-center my-8 space-x-4 text-center text-gray-500'>
-          <div>
-            Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-          </div>
-        </footer>
+          <footer class='flex items-center justify-center my-8 space-x-4 text-center text-gray-500'>
+            <div>
+              Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+            </div>
+          </footer>
+        </div>
       </div>
     </div>
-  </div>
+  
 </body>
 
 </html>
