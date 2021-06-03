@@ -30,7 +30,7 @@ twindObserve.observe(document.documentElement)</script>
   
     <div class='container mx-auto xl:max-w-screen-lg'>
       <!-- Header row-->
-      <div class='grid grid-cols-12 px-2'>
+      <div class='grid grid-cols-12 md:px-2'>
         <!-- Logo column -->
         <div class='hidden md:mr-4 md:block md:col-span-3'>
           <div class='flex items-end h-full pl-2 mt-2 space-x-2'>
@@ -45,12 +45,12 @@ twindObserve.observe(document.documentElement)</script>
         </div>
         <!-- Title column -->
         <div class='col-span-12 md:col-span-9'>
-
-          <div class='flex items-center justify-center'>
-            <h1 class='pb-2 mt-2 mb-2 text-6xl font-bold text-center'>
-              Emanote
-            </h1>
-          </div>
+          
+<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+  <a>
+    Emanote
+  </a>
+</h1>
         </div>
       </div>
 
@@ -188,9 +188,9 @@ twindObserve.observe(document.documentElement)</script>
         </div>
         <!-- Main body column -->
         <div class='col-span-12 md:col-span-9'>
-          <p class='my-3'>Welcome to <a href='https://github.com/srid/emanote' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Emanote</a>, which aims to be next-gen <a href='https://neuron.zettel.page/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>neuron</a> with powerful features.</p><p class='my-3'>Emanote is still a <strong>work in progress</strong>; therefore this site is empty. Visit the <a href='https://github.com/srid/emanote' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>GitHub README</a> for instructions on using. <a href='guide' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Guide</a> contains some doc hints, but nothing is fleshed out yet.</p>
-          
-
+          <div class='overflow-auto'>
+            <p class='my-3'>Welcome to <a href='https://github.com/srid/emanote' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Emanote</a>, which aims to be next-gen <a href='https://neuron.zettel.page/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>neuron</a> with powerful features.</p><p class='my-3'>Emanote is still a <strong>work in progress</strong>; therefore this site is empty. Visit the <a href='https://github.com/srid/emanote' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>GitHub README</a> for instructions on using. <a href='guide' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Guide</a> contains some doc hints, but nothing is fleshed out yet.</p>
+          </div>
           
 
           <note-meta>
@@ -204,8 +204,10 @@ twindObserve.observe(document.documentElement)</script>
           </note-meta>
 
           <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
-  <div>
-    Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+  <div class='flex space-x-2'>
+    <div><a class='font-bold' href='@index'>@Index</a></div>
+    <div>|</div>
+    <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a></div>
   </div>
 </footer>
         </div>

@@ -30,7 +30,7 @@ twindObserve.observe(document.documentElement)</script>
   
     <div class='container mx-auto xl:max-w-screen-lg'>
       <!-- Header row-->
-      <div class='grid grid-cols-12 px-2'>
+      <div class='grid grid-cols-12 md:px-2'>
         <!-- Logo column -->
         <div class='hidden md:mr-4 md:block md:col-span-3'>
           <div class='flex items-end h-full pl-2 mt-2 space-x-2'>
@@ -45,12 +45,41 @@ twindObserve.observe(document.documentElement)</script>
         </div>
         <!-- Title column -->
         <div class='col-span-12 md:col-span-9'>
+          
+  <div class='w-full text-gray-700'>
+    <div class='flex justify-left'>
+      <div class='bg-green-100 md:rounded-b-lg w-full py-2 px-2 md:w-auto md:py-0 md:px-0'>
+        <ul class='flex flex-wrap text-lg md:text-sm'>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href=''>
+                Emanote
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='demo'>
+                Demo
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
 
-          <div class='flex items-center justify-center'>
-            <h1 class='pb-2 mt-2 mb-2 text-6xl font-bold text-center'>
-              YAML configuration
-            </h1>
-          </div>
+
+<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+  <a>
+    YAML configuration
+  </a>
+</h1>
         </div>
       </div>
 
@@ -262,43 +291,10 @@ twindObserve.observe(document.documentElement)</script>
         </div>
         <!-- Main body column -->
         <div class='col-span-12 md:col-span-9'>
-          <p class='my-3'>Configure your site metadata, rendering configuration and such using YAML configuration. Create a <code class='py-0.5 bg-gray-100 text-sm'>foo.yaml</code> alongside <code class='py-0.5 bg-gray-100 text-sm'>foo.md</code> or <code class='py-0.5 bg-gray-100 text-sm'>foo/</code> folder, and those settings apply only to that route. The YAML structure is the same as your Markdown frontmatter, and vice-versa. Settings in the YAML frontmatter apply onto that Markdown route only; whereas settings in an individual .yaml file apply to that entire sub-route tree. Emanote does a deep-merge of the parent YAML configurations, so you can have children override only what’s necessary. This is sometimes known as <a href='https://www.11ty.dev/docs/data-cascade/' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>“data cascade”</a>. The final merged YAML structure is passed to the HTML templates, of which you have full rendering control over.</p><p class='my-3'>Notice how this page’s sidebar colorscheme has <span class='bg-green-100 text-green-700 font-bold text-3xl'>changed to green</span>? View <a href='https://github.com/srid/emanote/blob/master/docs/demo/yaml-config.md' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>the source of this page</a> to see the magic involved. That CSS greenery you just saw too comes from YAML.</p><p class='my-3'>For another example, notice how the demo section of this website has a different base site title (see <code class='py-0.5 bg-gray-100 text-sm'>demo.yaml</code> for the underlying configuration).</p>
+          <div class='overflow-auto'>
+            <p class='my-3'>Configure your site metadata, rendering configuration and such using YAML configuration. Create a <code class='py-0.5 bg-gray-100 text-sm'>foo.yaml</code> alongside <code class='py-0.5 bg-gray-100 text-sm'>foo.md</code> or <code class='py-0.5 bg-gray-100 text-sm'>foo/</code> folder, and those settings apply only to that route. The YAML structure is the same as your Markdown frontmatter, and vice-versa. Settings in the YAML frontmatter apply onto that Markdown route only; whereas settings in an individual .yaml file apply to that entire sub-route tree. Emanote does a deep-merge of the parent YAML configurations, so you can have children override only what’s necessary. This is sometimes known as <a href='https://www.11ty.dev/docs/data-cascade/' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>“data cascade”</a>. The final merged YAML structure is passed to the HTML templates, of which you have full rendering control over.</p><p class='my-3'>Notice how this page’s sidebar colorscheme has <span class='bg-green-100 text-green-700 font-bold text-3xl'>changed to green</span>? View <a href='https://github.com/srid/emanote/blob/master/docs/demo/yaml-config.md' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>the source of this page</a> to see the magic involved. That CSS greenery you just saw too comes from YAML.</p><p class='my-3'>For another example, notice how the demo section of this website has a different base site title (see <code class='py-0.5 bg-gray-100 text-sm'>demo.yaml</code> for the underlying configuration).</p>
+          </div>
           
-
-          
-  <div class='w-full p-4 mt-4 text-gray-700 bg-green-500 rounded'>
-    <div class='flex justify-center'>
-      <div class='w-full py-2 rounded'>
-        <ul class='flex text-sm lg:text-base'>
-          
-            <li class='inline-flex items-center'>
-              <a class='px-1 font-bold bg-gray-100 rounded' href=''>
-                Emanote
-              </a>
-              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
-                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
-              </svg>
-            </li>
-          
-            <li class='inline-flex items-center'>
-              <a class='px-1 font-bold bg-gray-100 rounded' href='demo'>
-                Demo
-              </a>
-              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
-                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
-              </svg>
-            </li>
-          
-          <li class='inline-flex items-center text-gray-200 font-bold'>
-            <a>
-              YAML configuration
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
 
           <note-meta>
             <div class='flex items-center justify-center mt-8 space-x-2 font-mono text-sm'>
@@ -311,8 +307,10 @@ twindObserve.observe(document.documentElement)</script>
           </note-meta>
 
           <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
-  <div>
-    Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+  <div class='flex space-x-2'>
+    <div><a class='font-bold' href='@index'>@Index</a></div>
+    <div>|</div>
+    <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a></div>
   </div>
 </footer>
         </div>

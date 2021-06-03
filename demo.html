@@ -30,7 +30,7 @@ twindObserve.observe(document.documentElement)</script>
   
     <div class='container mx-auto xl:max-w-screen-lg'>
       <!-- Header row-->
-      <div class='grid grid-cols-12 px-2'>
+      <div class='grid grid-cols-12 md:px-2'>
         <!-- Logo column -->
         <div class='hidden md:mr-4 md:block md:col-span-3'>
           <div class='flex items-end h-full pl-2 mt-2 space-x-2'>
@@ -45,12 +45,32 @@ twindObserve.observe(document.documentElement)</script>
         </div>
         <!-- Title column -->
         <div class='col-span-12 md:col-span-9'>
+          
+  <div class='w-full text-gray-700'>
+    <div class='flex justify-left'>
+      <div class='bg-blue-100 md:rounded-b-lg w-full py-2 px-2 md:w-auto md:py-0 md:px-0'>
+        <ul class='flex flex-wrap text-lg md:text-sm'>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href=''>
+                Emanote
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
 
-          <div class='flex items-center justify-center'>
-            <h1 class='pb-2 mt-2 mb-2 text-6xl font-bold text-center'>
-              Demo
-            </h1>
-          </div>
+
+<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+  <a>
+    Demo
+  </a>
+</h1>
         </div>
       </div>
 
@@ -260,34 +280,10 @@ twindObserve.observe(document.documentElement)</script>
         </div>
         <!-- Main body column -->
         <div class='col-span-12 md:col-span-9'>
-          <p class='my-3'>Demonstration of some of Emanote’s features. List is not comprehensive, due to WIP stage of the project.</p>
+          <div class='overflow-auto'>
+            <p class='my-3'>Demonstration of some of Emanote’s features. List is not comprehensive, due to WIP stage of the project.</p>
+          </div>
           
-
-          
-  <div class='w-full p-4 mt-4 text-gray-700 bg-blue-500 rounded'>
-    <div class='flex justify-center'>
-      <div class='w-full py-2 rounded'>
-        <ul class='flex text-sm lg:text-base'>
-          
-            <li class='inline-flex items-center'>
-              <a class='px-1 font-bold bg-gray-100 rounded' href=''>
-                Emanote
-              </a>
-              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
-                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
-              </svg>
-            </li>
-          
-          <li class='inline-flex items-center text-gray-200 font-bold'>
-            <a>
-              Demo
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
 
           <note-meta>
             <div class='flex items-center justify-center mt-8 space-x-2 font-mono text-sm'>
@@ -300,8 +296,10 @@ twindObserve.observe(document.documentElement)</script>
           </note-meta>
 
           <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
-  <div>
-    Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+  <div class='flex space-x-2'>
+    <div><a class='font-bold' href='@index'>@Index</a></div>
+    <div>|</div>
+    <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a></div>
   </div>
 </footer>
         </div>
