@@ -322,7 +322,32 @@ Wiki-links, directories, HTML templates for complete theming.
         <!-- Main body column -->
         <div class='col-span-12 md:col-span-9'>
           <div class='overflow-auto'>
-            <p class='my-3'>Demonstration of some of Emanote’s features. List is not comprehensive, due to WIP stage of the project.</p>
+            <p class='my-3'>This section demonstrates some of Emanote’s features. The list here is not comprehensive, due to WIP stage of the project.</p><p class='my-3'>To begin, we shall use the query feature to list all notes under the <code class='py-0.5 bg-gray-100 text-sm'>demo/</code> folder:</p><CodeBlock:Query>
+    <div class='p-2 border-2 rounded shadow hover:shadow-lg hover:border-gray-400'>
+      <header class='mb-2 font-bold text-gray-800'>
+        Pages under path 'demo'
+      </header>
+      
+        <!-- This should be a grid -->
+        <div class='flex flex-row items-end space-y-2'>
+          <div class='flex items-center'>
+            <a class='text-blue-600 font-bold hover:underline' href='demo/file-links'>
+              File WikiLinks
+            </a>
+          </div>
+        </div>
+      
+        <!-- This should be a grid -->
+        <div class='flex flex-row items-end space-y-2'>
+          <div class='flex items-center'>
+            <a class='text-blue-600 font-bold hover:underline' href='demo/yaml-config'>
+              YAML configuration
+            </a>
+          </div>
+        </div>
+      
+    </div>
+  </CodeBlock:Query><p class='my-3'>(The above should reflect the links you see in the sidebar on desktop browser)</p>
           </div>
           
 
