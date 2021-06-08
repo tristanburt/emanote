@@ -81,7 +81,7 @@ Wiki-links, directories, HTML templates for complete theming.
       <div class='grid grid-cols-12 px-2'>
         <!-- Sidebar column -->
         <div class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
-          <div class='float-right flex flex-row space-x-2 p-2 text-gray-500'>
+          <div class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
             <a href='@tags' title='View tags'>
               <svg class='w-4 h-4 hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
@@ -257,12 +257,10 @@ Wiki-links, directories, HTML templates for complete theming.
             <p class='my-3'>Emanote transforms a bunch of “source files” (Markdown, static files, etc.) into a “target website”, and does so in a <em>reactive</em> manner such that as the source files change the resultant website updates in real-time. The hot-reload aspect is delegated to <a href='https://ema.srid.ca/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Ema</a>, but Emanote’s high-level architecture is as follows,</p><ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source</code>: manages source files and communicates them to <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The key concept here is the notion of “union mount”, implemented by <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source.Mount</code>, which will eventually be made its own Haskell library.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>: Haskell types & machinary to represent the source files in memory, as well as a way to efficiently index and query into them.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The individual modules in this package should be <code class='py-0.5 bg-gray-100 text-sm'>import</code>ed separately to use the specific model types.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Route</code>: Haskell route types to point to somewhere in <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code> (eg: route to a .md file, or a route to a .jpeg file)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.View</code>: Rendering code (HTML, templates, site routes)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc</code>: Everything to do with light-weight markup processing<ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Markdown</code>: Markdown-specific parsers and syntax.</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Filter</code>: Emanote-specific transformation of Pandoc AST, via Heist custom splicing.</li></ul></li></ul><p class='my-3'>Ema acts as the framework orchestrating two things at the same time:</p><ol class='ml-4 space-y-1 list-decimal list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source.emanate</code> which is responsible for keeping the in-memory <code class='py-0.5 bg-gray-100 text-sm'>Model</code> in sync with what’s on disk</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.View.render</code> which, whilst querying the <code class='py-0.5 bg-gray-100 text-sm'>Model</code>, is responsible for producing the final HTML for every <code class='py-0.5 bg-gray-100 text-sm'>SiteRoute</code> in the target website.</li></ol><p class='my-3'>In addition, we have the following non-source files in the Git repository that are vital to Emanote’s functionality:</p><ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>./default</code>: The primary and first “layer” used, which provides the default HTML templates (we use Heist), <code class='py-0.5 bg-gray-100 text-sm'>index.md</code> and a favicon. Users can override these by creating an equivalent file (same path) in their own layer.</li></ul>
           </div>
           
-
           
-            <div class='flex items-center justify-center mt-8 space-x-2 font-mono text-sm'>
-              
-            </div>
-          
+  <div class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </div>
 
           <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
   <div class='flex space-x-2'>
