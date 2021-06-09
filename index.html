@@ -60,7 +60,7 @@ Wiki-links, directories, HTML templates for complete theming.
       <!-- Main row-->
       <div class='grid grid-cols-12 px-2'>
         <!-- Sidebar column -->
-        <div class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
+        <nav class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
           <div class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
             <a href='@tags' title='View tags'>
               <svg class='w-4 h-4 hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -232,18 +232,20 @@ Wiki-links, directories, HTML templates for complete theming.
 </div>
             
           </div>
-        </div>
+        </nav>
         <!-- Main body column -->
         <div class='col-span-12 md:col-span-9'>
-          <div class='overflow-auto'>
-            <p class='my-3'>Welcome to <a href='https://github.com/srid/emanote' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Emanote</a>, which aims to be next-gen <a href='https://neuron.zettel.page/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>neuron</a> with powerful features.</p><p class='my-3'>Emanote is still a <strong>work in progress</strong>; therefore this site is empty. Visit the <a href='https://github.com/srid/emanote' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>GitHub README</a> for instructions on using. <a href='guide' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Guide</a> contains some doc hints, but nothing is fleshed out yet.</p>
-          </div>
-          
-          
-  <div class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+          <main>
+            <article class='overflow-auto'>
+              <p class='my-3'>Welcome to <a href='https://github.com/srid/emanote' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Emanote</a>, which aims to be next-gen <a href='https://neuron.zettel.page/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>neuron</a> with powerful features.</p><p class='my-3'>Emanote is still a <strong>work in progress</strong>; therefore this site is empty. Visit the <a href='https://github.com/srid/emanote' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>GitHub README</a> for instructions on using. <a href='guide' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Guide</a> contains some doc hints, but nothing is fleshed out yet.</p>
+            </article>
+            
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-  </div>
+  </section>
 
+          </main>
           <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
   <div class='flex space-x-2'>
     <div><a class='font-bold' href='@index'>@Index</a></div>

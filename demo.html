@@ -80,7 +80,7 @@ Wiki-links, directories, HTML templates for complete theming.
       <!-- Main row-->
       <div class='grid grid-cols-12 px-2'>
         <!-- Sidebar column -->
-        <div class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
+        <nav class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
           <div class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
             <a href='@tags' title='View tags'>
               <svg class='w-4 h-4 hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -324,11 +324,12 @@ Wiki-links, directories, HTML templates for complete theming.
 </div>
             
           </div>
-        </div>
+        </nav>
         <!-- Main body column -->
         <div class='col-span-12 md:col-span-9'>
-          <div class='overflow-auto'>
-            <p class='my-3'>This section demonstrates some of Emanote’s features. The list here is not comprehensive, due to WIP stage of the project.</p><p class='my-3'>To begin, we shall use the query feature to list all notes under the <code class='py-0.5 bg-gray-100 text-sm'>demo/</code> folder:</p><CodeBlock:Query>
+          <main>
+            <article class='overflow-auto'>
+              <p class='my-3'>This section demonstrates some of Emanote’s features. The list here is not comprehensive, due to WIP stage of the project.</p><p class='my-3'>To begin, we shall use the query feature to list all notes under the <code class='py-0.5 bg-gray-100 text-sm'>demo/</code> folder:</p><CodeBlock:Query>
     <div class='p-2 border-2 rounded shadow hover:shadow-lg hover:border-gray-400'>
       <header class='mb-2 font-bold text-gray-800'>
         Pages under path 'demo'
@@ -354,13 +355,14 @@ Wiki-links, directories, HTML templates for complete theming.
       
     </div>
   </CodeBlock:Query><p class='my-3'>(The above should reflect the links you see in the sidebar on desktop browser)</p>
-          </div>
-          
-          
-  <div class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+            </article>
+            
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-  </div>
+  </section>
 
+          </main>
           <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
   <div class='flex space-x-2'>
     <div><a class='font-bold' href='@index'>@Index</a></div>

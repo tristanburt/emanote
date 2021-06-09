@@ -89,7 +89,7 @@ Wiki-links, directories, HTML templates for complete theming.
       <!-- Main row-->
       <div class='grid grid-cols-12 px-2'>
         <!-- Sidebar column -->
-        <div class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
+        <nav class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
           <div class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
             <a href='@tags' title='View tags'>
               <svg class='w-4 h-4 hover:text-green-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -335,18 +335,20 @@ Wiki-links, directories, HTML templates for complete theming.
 </div>
             
           </div>
-        </div>
+        </nav>
         <!-- Main body column -->
         <div class='col-span-12 md:col-span-9'>
-          <div class='overflow-auto'>
-            <p class='my-3'>Configure your site metadata, rendering configuration and such using YAML configuration. Create a <code class='py-0.5 bg-gray-100 text-sm'>foo.yaml</code> alongside <code class='py-0.5 bg-gray-100 text-sm'>foo.md</code> or <code class='py-0.5 bg-gray-100 text-sm'>foo/</code> folder, and those settings apply only to that route. The YAML structure is the same as your Markdown frontmatter, and vice-versa. Settings in the YAML frontmatter apply onto that Markdown route only; whereas settings in an individual .yaml file apply to that entire sub-route tree. Emanote does a deep-merge of the parent YAML configurations, so you can have children override only what’s necessary. This is sometimes known as <a href='https://www.11ty.dev/docs/data-cascade/' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>“data cascade”</a>. The final merged YAML structure is passed to the HTML templates, of which you have full rendering control over.</p><p class='my-3'>Notice how this page’s sidebar colorscheme has <span class='bg-green-100 text-green-700 font-bold text-3xl'>changed to green</span>? View <a href='https://github.com/srid/emanote/blob/master/docs/demo/yaml-config.md' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>the source of this page</a> to see the magic involved. That CSS greenery you just saw too comes from YAML.</p><p class='my-3'>For another example, notice how the demo section of this website has a different base site title (see <code class='py-0.5 bg-gray-100 text-sm'>demo.yaml</code> for the underlying configuration).</p>
-          </div>
-          
-          
-  <div class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+          <main>
+            <article class='overflow-auto'>
+              <p class='my-3'>Configure your site metadata, rendering configuration and such using YAML configuration. Create a <code class='py-0.5 bg-gray-100 text-sm'>foo.yaml</code> alongside <code class='py-0.5 bg-gray-100 text-sm'>foo.md</code> or <code class='py-0.5 bg-gray-100 text-sm'>foo/</code> folder, and those settings apply only to that route. The YAML structure is the same as your Markdown frontmatter, and vice-versa. Settings in the YAML frontmatter apply onto that Markdown route only; whereas settings in an individual .yaml file apply to that entire sub-route tree. Emanote does a deep-merge of the parent YAML configurations, so you can have children override only what’s necessary. This is sometimes known as <a href='https://www.11ty.dev/docs/data-cascade/' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>“data cascade”</a>. The final merged YAML structure is passed to the HTML templates, of which you have full rendering control over.</p><p class='my-3'>Notice how this page’s sidebar colorscheme has <span class='bg-green-100 text-green-700 font-bold text-3xl'>changed to green</span>? View <a href='https://github.com/srid/emanote/blob/master/docs/demo/yaml-config.md' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>the source of this page</a> to see the magic involved. That CSS greenery you just saw too comes from YAML.</p><p class='my-3'>For another example, notice how the demo section of this website has a different base site title (see <code class='py-0.5 bg-gray-100 text-sm'>demo.yaml</code> for the underlying configuration).</p>
+            </article>
+            
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-  </div>
+  </section>
 
+          </main>
           <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
   <div class='flex space-x-2'>
     <div><a class='font-bold' href='@index'>@Index</a></div>
