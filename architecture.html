@@ -145,7 +145,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
 
 
   
-
+  
 
 <!-- Rendering of this tree -->
 <div class='pl-2'>
@@ -153,9 +153,8 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
   <div class='flex items-center my-2 space-x-2 justify-left'>
     
     
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
       </svg>
     
   
@@ -164,7 +163,10 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
     </a>
     
       
-        
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
     
   </div>
 
@@ -256,9 +258,27 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
         <div class='col-span-12 md:col-span-9'>
           <main>
             <article class='overflow-auto'>
-              <p class='my-3'>Emanote transforms a bunch of “source files” (Markdown, static files, etc.) into a “target website”, and does so in a <em>reactive</em> manner such that as the source files change the resultant website updates in real-time. The hot-reload aspect is delegated to <a href='https://ema.srid.ca/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Ema</a>, but Emanote’s high-level architecture is as follows,</p><ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source</code>: manages source files and communicates them to <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The key concept here is the notion of “union mount”, implemented by <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source.Mount</code>, which will eventually be made its own Haskell library.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>: Haskell types & machinary to represent the source files in memory, as well as a way to efficiently index and query into them.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The individual modules in this package should be <code class='py-0.5 bg-gray-100 text-sm'>import</code>ed separately to use the specific model types.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Route</code>: Haskell route types to point to somewhere in <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code> (eg: route to a .md file, or a route to a .jpeg file)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.View</code>: Rendering code (HTML, templates, site routes)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc</code>: Everything to do with light-weight markup processing<ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Markdown</code>: Markdown-specific parsers and syntax.</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Filter</code>: Emanote-specific transformation of Pandoc AST, via Heist custom splicing.</li></ul></li></ul><p class='my-3'>Ema acts as the framework orchestrating two things at the same time:</p><ol class='ml-4 space-y-1 list-decimal list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source.emanate</code> which is responsible for keeping the in-memory <code class='py-0.5 bg-gray-100 text-sm'>Model</code> in sync with what’s on disk</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.View.render</code> which, whilst querying the <code class='py-0.5 bg-gray-100 text-sm'>Model</code>, is responsible for producing the final HTML for every <code class='py-0.5 bg-gray-100 text-sm'>SiteRoute</code> in the target website.</li></ol><p class='my-3'>In addition, we have the following non-source files in the Git repository that are vital to Emanote’s functionality:</p><ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>./default</code>: The primary and first “layer” used, which provides the default HTML templates (we use Heist), <code class='py-0.5 bg-gray-100 text-sm'>index.md</code> and a favicon. Users can override these by creating an equivalent file (same path) in their own layer.</li></ul>
+              <p class='my-3'>Emanote is a Haskell program that transforms a bunch of “source files” (Markdown, static files, etc.) into a “target website”, and does so in a <a href='https://en.wikipedia.org/wiki/Reactive_programming' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>reactive</a> manner such that as the source files change the resultant website updates in real-time (thanks to <a href='https://ema.srid.ca/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Ema</a>'s hot-reload).</p><p class='my-3'>Emanote’s high-level architecture is as follows,</p><ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source</code>: manages source files and communicates them to <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The key concept here is the notion of “union mount”, implemented by <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source.Mount</code>, which will eventually be made its own Haskell library.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>: Haskell types & machinary to represent the source files in memory, as well as a way to efficiently index and query into them.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The individual modules in this package should be <code class='py-0.5 bg-gray-100 text-sm'>import</code>ed separately to use the specific model types.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Route</code>: Haskell route types to point to somewhere in <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code> (eg: route to a .md file, or a route to a .jpeg file)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.View</code>: Rendering code (HTML, templates, site routes)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc</code>: Everything to do with light-weight markup processing<ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Markdown</code>: Markdown-specific parsers and syntax.</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Filter</code>: Emanote-specific transformation of Pandoc AST, via Heist custom splicing.</li></ul></li></ul><p class='my-3'>Ema acts as the framework orchestrating two things at the same time:</p><ol class='ml-4 space-y-1 list-decimal list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source.emanate</code> which is responsible for keeping the in-memory <code class='py-0.5 bg-gray-100 text-sm'>Model</code> in sync with what’s on disk</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.View.render</code> which, whilst querying the <code class='py-0.5 bg-gray-100 text-sm'>Model</code>, is responsible for producing the final HTML for every <code class='py-0.5 bg-gray-100 text-sm'>SiteRoute</code> in the target website.</li></ol><p class='my-3'>In addition, we have the following non-source files in the Git repository that are vital to Emanote’s functionality:</p><ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>./default</code>: The primary and first “layer” used, which provides the default HTML templates (we use Heist), <code class='py-0.5 bg-gray-100 text-sm'>index.md</code> and a favicon. Users can override these by creating an equivalent file (same path) in their own layer.</li></ul>
             </article>
             
+  <div class='p-4 mt-8 bg-gray-100 rounded'>
+    <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
+    <ul class='space-y-1'>
+      
+        <li>
+          <a class='text-blue-600 font-bold hover:bg-blue-50' href=''>
+            Emanote
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+                    -->
+            <div><p>Checkout <a href='start' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Getting Started</a>. Some doc hints are available in <a href='guide' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Guide</a>, but nothing is fleshed out yet. If you are interested in contributing, see <a href='architecture' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Architecture</a>.</p></div>
+          </div>
+        </li>
+      
+    </ul>
+  </div>
+
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
