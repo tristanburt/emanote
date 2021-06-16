@@ -346,11 +346,11 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      Configure your site metadata, rendering configuration and such using YAML configuration. Create a <code class='py-0.5 bg-gray-100 text-sm'>foo.yaml</code> alongside <code class='py-0.5 bg-gray-100 text-sm'>foo.md</code> or <code class='py-0.5 bg-gray-100 text-sm'>foo/</code> folder, and those settings apply only to that route. The YAML structure is the same as your Markdown frontmatter, and vice-versa. Settings in the YAML frontmatter apply onto that Markdown route only; whereas settings in an individual .yaml file apply to that entire sub-route tree. Emanote does a deep-merge of the parent YAML configurations, so you can have children override only what’s necessary. This is sometimes known as <a href='https://www.11ty.dev/docs/data-cascade/' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>“data cascade”</a>. The final merged YAML structure is passed to the HTML templates, of which you have full rendering control over.
+      Configure your site metadata, rendering configuration and such using YAML configuration. Create a <code class='py-0.5 bg-gray-100 text-sm'>foo.yaml</code> alongside <code class='py-0.5 bg-gray-100 text-sm'>foo.md</code> or <code class='py-0.5 bg-gray-100 text-sm'>foo/</code> folder, and those settings apply only to that route. The YAML structure is the same as your Markdown frontmatter, and vice-versa. Settings in the YAML frontmatter apply onto that Markdown route only; whereas settings in an individual .yaml file apply to that entire sub-route tree. Emanote does a deep-merge of the parent YAML configurations, so you can have children override only what’s necessary. This is sometimes known as <a href='https://www.11ty.dev/docs/data-cascade/' class='text-green-600 hover:underline' target='_blank' rel='noopener'>“data cascade”</a>. The final merged YAML structure is passed to the HTML templates, of which you have full rendering control over.
     </p>
   
     <p class='my-3'>
-      Notice how this page’s sidebar colorscheme has <span class='bg-green-100 text-green-700 font-bold text-3xl'>changed to green</span>? View <a href='https://github.com/srid/emanote/blob/master/docs/demo/yaml-config.md' title class='text-green-600 hover:underline' target='_blank' rel='noopener'>the source of this page</a> to see the magic involved. That CSS greenery you just saw too comes from YAML.
+      Notice how this page’s sidebar colorscheme has <span class='bg-green-100 text-green-700 font-bold text-3xl'>changed to green</span>? View <a href='https://github.com/srid/emanote/blob/master/docs/demo/yaml-config.md' class='text-green-600 hover:underline' target='_blank' rel='noopener'>the source of this page</a> to see the magic involved. That CSS greenery you just saw too comes from YAML.
     </p>
   
     <p class='my-3'>
@@ -370,7 +370,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.1.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

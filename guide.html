@@ -307,7 +307,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
     <p class='my-3'>
       Mega features,
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>notebook layers overlay</li><li>polymorphic (in filetype, and path signifier) wiki-links: <code class='py-0.5 bg-gray-100 text-sm'>[[Foo]]</code>, <code class='py-0.5 bg-gray-100 text-sm'>[[Bar/Qux]]</code>, <code class='py-0.5 bg-gray-100 text-sm'>[[Examples/Program.py]]</code></li><li>linking to ‘folders’ (even without $folder.md)</li><li><a href='https://www.11ty.dev/docs/data-cascade/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>data cascade</a></li><li>s/<a href='https://web.dev/how-we-build-webdev-and-use-web-components/#templating' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>shortcodes</a>/attribute class/ (i., <code class='py-0.5 bg-gray-100 text-sm'>:::{.foo}</code>)</li><li>Powerful and simpler query system (cf. Obsidian search)<ul class='ml-4 space-y-1 list-disc list-inside'><li>Fully customizable ‘results’ layout (eg: to produce blog timeline with summary snippet)</li></ul></li><li>Pandoc filters (<code class='py-0.5 bg-gray-100 text-sm'>Pandoc -&gt; IO Pandoc</code>)<ul class='ml-4 space-y-1 list-disc list-inside'><li>Including citations</li></ul></li><li>mdBook like search (emanote should provide the index)</li><li>Ref: <a href='https://github.com/srid/neuron/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>top requested neuron features</a></li></ul>
+  <ul class='ml-4 space-y-1 list-disc list-inside'><li>notebook layers overlay</li><li>polymorphic (in filetype, and path signifier) wiki-links: <code class='py-0.5 bg-gray-100 text-sm'>[[Foo]]</code>, <code class='py-0.5 bg-gray-100 text-sm'>[[Bar/Qux]]</code>, <code class='py-0.5 bg-gray-100 text-sm'>[[Examples/Program.py]]</code></li><li>linking to ‘folders’ (even without $folder.md)</li><li><a href='https://www.11ty.dev/docs/data-cascade/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>data cascade</a></li><li>s/<a href='https://web.dev/how-we-build-webdev-and-use-web-components/#templating' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>shortcodes</a>/attribute class/ (i., <code class='py-0.5 bg-gray-100 text-sm'>:::{.foo}</code>)</li><li>Powerful and simpler query system (cf. Obsidian search)<ul class='ml-4 space-y-1 list-disc list-inside'><li>Fully customizable ‘results’ layout (eg: to produce blog timeline with summary snippet)</li></ul></li><li>Pandoc filters (<code class='py-0.5 bg-gray-100 text-sm'>Pandoc -&gt; IO Pandoc</code>)<ul class='ml-4 space-y-1 list-disc list-inside'><li>Including citations</li></ul></li><li>mdBook like search (emanote should provide the index)</li><li>Ref: <a href='https://github.com/srid/neuron/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>top requested neuron features</a></li></ul>
     <p class='my-3'>
       Known limitations
     </p>
@@ -325,7 +325,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Checkout <a href='start' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Getting Started</a>. Some doc hints are available in <a href='guide' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Guide</a>, but nothing is fleshed out yet. If you are interested in contributing, see <a href='architecture' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Architecture</a>.</p></div>
+            <div><p>Checkout <a href='start' class='text-black-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Getting Started</a>. Some doc hints are available in <a href='guide' class='text-black-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Guide</a>, but nothing is fleshed out yet. If you are interested in contributing, see <a href='architecture' class='text-black-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Architecture</a>.</p></div>
           </div>
         </li>
       
@@ -343,7 +343,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.1.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>
