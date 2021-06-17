@@ -22,7 +22,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
 
   
   <!-- CSSSTART -->
-	<link rel="stylesheet" href="emanote-compiled-fc9adc92079c7af8e8edac1c7a1f4d7c.css" />
+	<link rel="stylesheet" href="emanote-compiled-966151f6891ce5545e70bcb8ffa9ba6c.css" />
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -267,7 +267,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
     <p class='my-3'>
       Emanote’s high-level architecture is as follows,
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source</code>: manages source files and communicates them to <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The key concept here is the notion of “union mount”, implemented by <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source.Mount</code>, which will eventually be made its own Haskell library.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>: Haskell types & machinary to represent the source files in memory, as well as a way to efficiently index and query into them.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The individual modules in this package should be <code class='py-0.5 bg-gray-100 text-sm'>import</code>ed separately to use the specific model types.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Route</code>: Haskell route types to point to somewhere in <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code> (eg: route to a .md file, or a route to a .jpeg file)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.View</code>: Rendering code (HTML, templates, site routes)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc</code>: Everything to do with light-weight markup processing<ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Markdown</code>: Markdown-specific parsers and syntax.</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Filter</code>: Emanote-specific transformation of Pandoc AST, via Heist custom splicing.</li></ul></li></ul>
+  <ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source</code>: manages source files and communicates them to <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The key concept here is the notion of “union mount”, implemented by <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Source.Mount</code>, which will eventually be made its own Haskell library.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code>: Haskell types & machinary to represent the source files in memory, as well as a way to efficiently index and query into them.<ul class='ml-4 space-y-1 list-disc list-inside'><li>The individual modules in this package should be <code class='py-0.5 bg-gray-100 text-sm'>import</code>ed separately to use the specific model types.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Route</code>: Route types<ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Route.ModelRoute</code>: Haskell route types to point to somewhere in <code class='py-0.5 bg-gray-100 text-sm'>Emanote.Model</code> (eg: route to a .md file, or a route to a .jpeg file)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Route.SiteRoute</code>: Haskell route types pointing to somewhere in the generated site.</li></ul></li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.View</code>: Rendering code (HTML, templates, site routes)</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc</code>: Everything to do with light-weight markup processing<ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Markdown</code>: Markdown-specific parsers and syntax.</li><li><code class='py-0.5 bg-gray-100 text-sm'>Emanote.Pandoc.Filter</code>: Emanote-specific transformation of Pandoc AST, via Heist custom splicing.</li></ul></li></ul>
     <p class='my-3'>
       Ema acts as the framework orchestrating two things at the same time:
     </p>
@@ -307,7 +307,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.1.1
+      0.1.2.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>
