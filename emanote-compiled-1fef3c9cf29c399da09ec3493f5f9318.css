@@ -186,6 +186,9 @@ ul, ol {
 .rounded {
   border-radius: 0.25rem;
 }
+.rounded-lg {
+  border-radius: 0.5rem;
+}
 .border-2 {
   border-width: 2px;
 }
@@ -303,6 +306,10 @@ ul, ol {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .list-inside {
   list-style-position: inside;
 }
@@ -359,6 +366,9 @@ ul, ol {
 .hover\:opacity-80:hover {
   opacity: 0.8;
 }
+.opacity-95 {
+  opacity: 0.95;
+}
 .overflow-auto {
   overflow: auto;
 }
@@ -389,6 +399,10 @@ ul, ol {
 .py-0\.5 {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .pb-2 {
   padding-bottom: 0.5rem;
@@ -530,6 +544,11 @@ ul, ol {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
   --tw-scale-z: 1.25;
+}
+.scale-95 {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  --tw-scale-z: .95;
 }
 .transition {
   -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, -webkit-box-shadow, -webkit-transform, filter, backdrop-filter;
