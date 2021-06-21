@@ -4,7 +4,7 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    File WikiLinks – Emanote Demos
+    Extended Markdown – Emanote Demos
   </title>
   
     
@@ -80,7 +80,7 @@
 
 <h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black '>
   <a>
-    File WikiLinks
+    Extended Markdown
   </a>
 </h1>
         </div>
@@ -300,6 +300,42 @@
       <!-- Variable bindings for this tree-->
 
   
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-blue-600 hover:underline truncate' title='Extended Markdown' href='demo/markdown'>
+      Extended Markdown
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+
+  
     
   
 
@@ -320,8 +356,8 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Extended Markdown' href='demo/markdown'>
-      Extended Markdown
+    <a class='hover:underline truncate' title='File WikiLinks' href='demo/file-links'>
+      File WikiLinks
     </a>
     
       
@@ -332,42 +368,6 @@
   <!-- Node's children forest, displayed only on active trees
     TODO: Use <details> to toggle visibility?
   -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-
-  
-  
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
-        </path>
-      </svg>
-      
-  
-    <a class='font-bold text-blue-600 hover:underline truncate' title='File WikiLinks' href='demo/file-links'>
-      File WikiLinks
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
   
 </div>
     
@@ -458,45 +458,108 @@
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <code class='py-0.5 bg-gray-100 text-sm'>[[..]]</code> style wikilinks can link to not only Markdown files, but also to any <em>other</em> files.
+      Emanote notes are written in Markdown format. A tutorial is <a href='https://commonmark.org/help/tutorial/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>available here</a>. Below we shall highlight some of the commonmark extensions that Emanote supports on top of standard Mardown syntax.
+    </p>
+  <h2 id='footnotes' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Footnotes</h2>
+    <p class='my-3'>
+      <a href='https://github.com/jgm/commonmark-hs/blob/master/commonmark-extensions/test/footnotes.md' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://github.com/jgm/commonmark-hs/blob/master/commonmark-extensions/test/footnotes.md</a>
     </p>
   
     <p class='my-3'>
-      For example, here is a link to some text file: <a href='demo/Sample.txt' class='text-blue-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>File:Sample.txt</a>
+      Demo: Checkout this note
+    <!-- DoNotFormat -->
+    <sup class='px-0.5'><a class='text-blue-600 hover:underline' href='#fn1'>1</a></sup>
+    <!-- DoNotFormat -->
+   and this other note
+    <!-- DoNotFormat -->
+    <sup class='px-0.5'><a class='text-blue-600 hover:underline' href='#fn2'>2</a></sup>
+    <!-- DoNotFormat -->
+   as both are footnotes.
+    </p>
+  <h2 id='definition-lists' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Definition lists</h2>
+    <p class='my-3'>
+      <a href='https://github.com/jgm/commonmark-hs/blob/master/commonmark-extensions/test/definition_lists.md' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://github.com/jgm/commonmark-hs/blob/master/commonmark-extensions/test/definition_lists.md</a>
     </p>
   
-    <p class='my-3'>
-      You can also specify the full, or subset of, the path: <a href='demo/Sample.txt' class='text-blue-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>File:demo/Sample.txt</a>
-    </p>
+    <dl class='flex flex-col'>
+      
+        <div class='my-1'>
+          <dt class='text-l font-bold'>
+            Fruits
+          </dt>
+          
+            <div class='flex flex-col pl-2'>
+              <dd class='text-gray-700'>
+                Apples
+              </dd>
+            </div>
+          
+            <div class='flex flex-col pl-2'>
+              <dd class='text-gray-700'>
+                Oranges
+              </dd>
+            </div>
+          
+        </div>
+      
+        <div class='my-1'>
+          <dt class='text-l font-bold'>
+            Animal Foods
+          </dt>
+          
+            <div class='flex flex-col pl-2'>
+              <dd class='text-gray-700'>
+                Eggs
+              </dd>
+            </div>
+          
+            <div class='flex flex-col pl-2'>
+              <dd class='text-gray-700'>
+                Diary
+              </dd>
+            </div>
+          
+            <div class='flex flex-col pl-2'>
+              <dd class='text-gray-700'>
+                Offal
+              </dd>
+            </div>
+          
+            <div class='flex flex-col pl-2'>
+              <dd class='text-gray-700'>
+                Muscle meat
+              </dd>
+            </div>
+          
+        </div>
+      
+    </dl>
   
-    <p class='my-3'>
-      Of course, a custom link text may also be specified: <a href='demo/Sample.txt' class='text-blue-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Some text file</a>
-    </p>
-  
-    <p class='my-3'>
-      You can also add emails, but they are not considered as <em>links</em>: mailto: <a href='mailto:foo@bar.com' class='text-blue-600 font-bold hover:underline'>foo@bar.com</a>
-    </p>
+    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
+      
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
+            Reference to a note.
+          </div>
+        </div>
+      
+        <div id='fn2'>
+          <header class='italic'>
+            2.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
+            Another reference to a note.
+          </div>
+        </div>
+      
+    </div>
   
             </article>
             
-  <div class='p-4 mt-8 bg-gray-100 rounded'>
-    <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
-    <ul class='space-y-1'>
-      
-        <li>
-          <a class='text-blue-600 font-bold hover:bg-blue-50' href='demo/embed'>
-            Embedding
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
-            <div><p>Embedding of <a href='demo/file-links' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>File WikiLinks</a>, as indicated in the aforementioned Obsidian help page, will eventually be supported; for now, certain file types already work.</p></div>
-          </div>
-        </li>
-      
-    </ul>
-  </div>
-
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
