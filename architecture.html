@@ -20,7 +20,7 @@
 
   
   <!-- CSSSTART -->
-	<link rel="stylesheet" href="emanote-compiled-7a4a6806a5cd26d688a396e9fec668ea.css" />
+	<link rel="stylesheet" href="emanote-compiled-89ee007b0dbefd77c82e07ed348de340.css" />
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -257,7 +257,12 @@
         <div class='col-span-12 md:col-span-9'>
           <main>
             <article class='overflow-auto'>
-              
+  <div class='p-2 flex items-center justify-center'>
+  <span class='bg-red-100 text-sm p-2 rounded '>
+    <b>Note</b>: Emanote documentation is a work-in-progress.
+  </span>
+</div>
+  
     <p class='my-3'>
       Emanote is a Haskell program that transforms a bunch of “source files” (Markdown, static files, etc.) into a “target website”, and does so in a <a href='https://en.wikipedia.org/wiki/Reactive_programming' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>reactive</a> manner such that as the source files change the resultant website updates in real-time (thanks to <a href='https://ema.srid.ca/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Ema</a>'s hot-reload).
     </p>
@@ -274,7 +279,7 @@
       In addition, we have the following non-source files in the Git repository that are vital to Emanote’s functionality:
     </p>
   <ul class='ml-4 space-y-1 list-disc list-inside'><li><code class='py-0.5 bg-gray-100 text-sm'>./default</code>: The primary and first “layer” used, which provides the default HTML templates (we use Heist), <code class='py-0.5 bg-gray-100 text-sm'>index.md</code> and a favicon. Users can override these by creating an equivalent file (same path) in their own layer.</li></ul>
-            </article>
+</article>
             
   <div class='p-4 mt-8 bg-gray-100 rounded'>
     <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
@@ -305,7 +310,7 @@
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.8.0
+      0.1.9.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>
