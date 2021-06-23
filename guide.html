@@ -22,7 +22,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
 
   
   <!-- CSSSTART -->
-	<link rel="stylesheet" href="emanote-compiled-35a405b6ef918ae411e83da58b261578.css" />
+	<link rel="stylesheet" href="emanote-compiled-68a286f6f00e3515031587568ca77e12.css" />
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -82,7 +82,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='@tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-purple-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -291,8 +291,8 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <div class='flex items-center justify-center py-2 mt-2'>
   <span class='p-2 text-sm bg-red-100 rounded '>
@@ -300,22 +300,158 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
   </span>
 </div>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       TODO Just a skeleton for now.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Remember to document these
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>pandoc -&gt; rewriteClass</li><li>Heist docs for Ema<ul class='ml-4 space-y-1 list-disc list-inside'><li>Helper.Heist</li><li>Helper.Heist.Tailwind - for <code class='py-0.5 bg-gray-100 text-sm'>&lt;Tailwind-Include /&gt;</code> in head that uses inline CSS in dev server, and include of generated CSS in prod.</li><li>adding custom splices (when using as a library)</li></ul></li></ul>
-    <p class='my-3'>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          pandoc -&gt; rewriteClass
+        </li>
+      
+        <li>
+          Heist docs for Ema
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          Helper.Heist
+        </li>
+      
+        <li>
+          Helper.Heist.Tailwind - for <code class='py-0.5 bg-gray-100 text-sm'>&lt;Tailwind-Include /&gt;</code> in head that uses inline CSS in dev server, and include of generated CSS in prod.
+        </li>
+      
+        <li>
+          adding custom splices (when using as a library)
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
       Mega features,
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>notebook layers overlay</li><li>polymorphic (in filetype, and path signifier) wiki-links: <code class='py-0.5 bg-gray-100 text-sm'>[[Foo]]</code>, <code class='py-0.5 bg-gray-100 text-sm'>[[Bar/Qux]]</code>, <code class='py-0.5 bg-gray-100 text-sm'>[[Examples/Program.py]]</code></li><li>linking to ‘folders’ (even without $folder.md)</li><li><a href='https://www.11ty.dev/docs/data-cascade/' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>data cascade</a></li><li>s/<a href='https://web.dev/how-we-build-webdev-and-use-web-components/#templating' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>shortcodes</a>/attribute class/ (i., <code class='py-0.5 bg-gray-100 text-sm'>:::{.foo}</code>)</li><li>Powerful and simpler query system (cf. Obsidian search)<ul class='ml-4 space-y-1 list-disc list-inside'><li>Fully customizable ‘results’ layout (eg: to produce blog timeline with summary snippet)</li></ul></li><li>Obsidian-style embedding<ul class='ml-4 space-y-1 list-disc list-inside'><li>Describe a workflow of daily note + note context (alternative to Andy’s stacked notes)</li></ul></li><li>Pandoc filters (<code class='py-0.5 bg-gray-100 text-sm'>Pandoc -&gt; IO Pandoc</code>)<ul class='ml-4 space-y-1 list-disc list-inside'><li>Including citations</li></ul></li><li>mdBook like search (emanote should provide the index)</li><li>Ref: <a href='https://github.com/srid/neuron/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>top requested neuron features</a></li><li>Tailwind styling in Markdown</li><li>template hooks</li></ul>
-    <p class='my-3'>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          notebook layers overlay
+        </li>
+      
+        <li>
+          polymorphic (in filetype, and path signifier) wiki-links: <code class='py-0.5 bg-gray-100 text-sm'>[[Foo]]</code>, <code class='py-0.5 bg-gray-100 text-sm'>[[Bar/Qux]]</code>, <code class='py-0.5 bg-gray-100 text-sm'>[[Examples/Program.py]]</code>
+        </li>
+      
+        <li>
+          linking to ‘folders’ (even without $folder.md)
+        </li>
+      
+        <li>
+          <a href='https://www.11ty.dev/docs/data-cascade/' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>data cascade</a>
+        </li>
+      
+        <li>
+          s/<a href='https://web.dev/how-we-build-webdev-and-use-web-components/#templating' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>shortcodes</a>/attribute class/ (i., <code class='py-0.5 bg-gray-100 text-sm'>:::{.foo}</code>)
+        </li>
+      
+        <li>
+          Powerful and simpler query system (cf. Obsidian search)
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          Fully customizable ‘results’ layout (eg: to produce blog timeline with summary snippet)
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Obsidian-style embedding
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          Describe a workflow of daily note + note context (alternative to Andy’s stacked notes)
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Pandoc filters (<code class='py-0.5 bg-gray-100 text-sm'>Pandoc -&gt; IO Pandoc</code>)
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          Including citations
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          mdBook like search (emanote should provide the index)
+        </li>
+      
+        <li>
+          Ref: <a href='https://github.com/srid/neuron/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>top requested neuron features</a>
+        </li>
+      
+        <li>
+          Tailwind styling in Markdown
+        </li>
+      
+        <li>
+          template hooks
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
       Known limitations
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>JS unreliability in live-server mode.<ul class='ml-4 space-y-1 list-disc list-inside'><li>PrismJS works</li><li>MathJS does not</li></ul></li><li>Fsnotify limitations<ul class='ml-4 space-y-1 list-disc list-inside'><li>If doing a directory move/rename, restart emanote.</li></ul></li></ul>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          JS unreliability in live-server mode.
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          PrismJS works
+        </li>
+      
+        <li>
+          MathJS does not
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Fsnotify limitations
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          If doing a directory move/rename, restart emanote.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
 </article>
             
   <div class='p-4 mt-8 bg-gray-100 rounded'>
@@ -349,7 +485,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.13.1
       </span>
     </div>
   </div>

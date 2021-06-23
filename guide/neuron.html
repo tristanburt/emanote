@@ -22,7 +22,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
 
   
   <!-- CSSSTART -->
-	<link rel="stylesheet" href="emanote-compiled-35a405b6ef918ae411e83da58b261578.css" />
+	<link rel="stylesheet" href="emanote-compiled-68a286f6f00e3515031587568ca77e12.css" />
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -91,7 +91,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='@tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-purple-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -302,8 +302,8 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <div class='flex items-center justify-center py-2 mt-2'>
   <span class='p-2 text-sm bg-red-100 rounded '>
@@ -311,18 +311,70 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
   </span>
 </div>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       TODO
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Neuron notes should mostly work, except for the below:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>No uptree or folgezettel, yet.</li><li>Replace <code class='py-0.5 bg-gray-100 text-sm'>z:zettels</code> with Obsidian-style queries (<a href='demo' class='text-purple-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>see demo</a>)<ul class='ml-4 space-y-1 list-disc list-inside'><li>Query results do not impact graph connections (thus backlinks). If you want to establish connections to multiple notes, do it by explicitly linking to them individually. Emanote chose this option, because it was simpler to implement. Users are encouraged to try to persuade the author otherwise if there is a compelling rationale.</li></ul></li><li>No RSS support yet.</li></ul>
-    <p class='my-3'>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          No uptree or folgezettel, yet.
+        </li>
+      
+        <li>
+          Replace <code class='py-0.5 bg-gray-100 text-sm'>z:zettels</code> with Obsidian-style queries (<a href='demo' class='text-purple-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>see demo</a>)
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          Query results do not impact graph connections (thus backlinks). If you want to establish connections to multiple notes, do it by explicitly linking to them individually. Emanote chose this option, because it was simpler to implement. Users are encouraged to try to persuade the author otherwise if there is a compelling rationale.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          No RSS support yet.
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
       Capabilities Emanote provides, but neuron does not:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Live server with hot reload</li><li>Flexible wikilins (link to directories, or based on path, eg: <code class='py-0.5 bg-gray-100 text-sm'>[[Foo/Bar]]</code>)</li><li>Full path based URLs (unless <code class='py-0.5 bg-gray-100 text-sm'>slug</code> is set)</li><li>Full theming (customize HTML fully)</li><li>YAML based configuration at per-route level</li><li>Layers (merge Zettelkastens, or overlay them)</li></ul>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          Live server with hot reload
+        </li>
+      
+        <li>
+          Flexible wikilins (link to directories, or based on path, eg: <code class='py-0.5 bg-gray-100 text-sm'>[[Foo/Bar]]</code>)
+        </li>
+      
+        <li>
+          Full path based URLs (unless <code class='py-0.5 bg-gray-100 text-sm'>slug</code> is set)
+        </li>
+      
+        <li>
+          Full theming (customize HTML fully)
+        </li>
+      
+        <li>
+          YAML based configuration at per-route level
+        </li>
+      
+        <li>
+          Layers (merge Zettelkastens, or overlay them)
+        </li>
+      
+    </ul>
+  
 </article>
             
             
@@ -337,7 +389,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.13.1
       </span>
     </div>
   </div>

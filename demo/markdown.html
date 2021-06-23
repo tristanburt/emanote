@@ -22,7 +22,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
 
   
   <!-- CSSSTART -->
-	<link rel="stylesheet" href="emanote-compiled-35a405b6ef918ae411e83da58b261578.css" />
+	<link rel="stylesheet" href="emanote-compiled-68a286f6f00e3515031587568ca77e12.css" />
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -91,7 +91,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='@tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-purple-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -454,8 +454,8 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <div class='flex items-center justify-center py-2 mt-2'>
   <span class='p-2 text-sm bg-red-100 rounded '>
@@ -463,27 +463,27 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
   </span>
 </div>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Emanote notes are written in Markdown format. A tutorial is <a href='https://commonmark.org/help/tutorial/' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>available here</a>. Below we shall highlight some of the commonmark extensions that Emanote supports on top of standard Mardown syntax.
     </p>
-  <h2 id='emojis' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Emojis</h2>
-    <p class='my-3'>
+  <h2 id='emojis' class='mb-4 text-4xl font-bold text-gray-700'>Emojis</h2>
+    <p class='mb-3'>
       <span class='emoji' data-emoji='smile' style='font-family: emoji'>😄</span>
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       <span class='emoji' data-emoji='runner' style='font-family: emoji'>🏃</span> <span class='emoji' data-emoji='ant' style='font-family: emoji'>🐜</span>
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       See <a href='https://gist.github.com/rxaviers/7360908' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>list of available emojis</a> for reference.
     </p>
-  <h2 id='footnotes' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Footnotes</h2>
-    <p class='my-3'>
+  <h2 id='footnotes' class='mb-4 text-4xl font-bold text-gray-700'>Footnotes</h2>
+    <p class='mb-3'>
       <a href='https://github.com/jgm/commonmark-hs/blob/master/commonmark-extensions/test/footnotes.md' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>https://github.com/jgm/commonmark-hs/blob/master/commonmark-extensions/test/footnotes.md</a>
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Demo: Checkout this note
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-purple-600 hover:underline' href='#fn1'>1</a></sup>
@@ -494,7 +494,11 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
     <!-- DoNotFormat -->
    as both are footnotes.
     </p>
-  <h2 id='task-lists' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Task lists</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>
+  <h2 id='task-lists' class='mb-4 text-4xl font-bold text-gray-700'>Task lists</h2>
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          
     <!-- FIXME: Fix list styling to use flexbox, so task lists don't botch them up -->
     <label class='inline-flex items-start space-x-2'>
       <input checked type='checkbox' class='flex-shrink-0 w-5 h-5 checked:bg-blue-600 checked:border-transparent' />
@@ -502,19 +506,31 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
         A task that was done
       </span>
     </label>
-  </li><li>
+  
+        </li>
+      
+        <li>
+          
     <label class='inline-flex items-start space-x-2'>
       <input type='checkbox' class='flex-shrink-0 w-5 h-5' />
       <span>
         A task that is to be done.
       </span>
     </label>
-  </li><li>A list item with no task marker</li></ul>
-    <p class='my-3'>
+  
+        </li>
+      
+        <li>
+          A list item with no task marker
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
       Tasks can also be written outside of list context, such as paragraphs:
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       
     <label class='inline-flex items-start space-x-2'>
       <input type='checkbox' class='flex-shrink-0 w-5 h-5' />
@@ -525,7 +541,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
   
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       
     <!-- FIXME: Fix list styling to use flexbox, so task lists don't botch them up -->
     <label class='inline-flex items-start space-x-2'>
@@ -536,8 +552,8 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
     </label>
   
     </p>
-  <h2 id='definition-lists' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Definition lists</h2>
-    <p class='my-3'>
+  <h2 id='definition-lists' class='mb-4 text-4xl font-bold text-gray-700'>Definition lists</h2>
+    <p class='mb-3'>
       <a href='https://github.com/jgm/commonmark-hs/blob/master/commonmark-extensions/test/definition_lists.md' class='text-purple-600 hover:underline' target='_blank' rel='noopener'>https://github.com/jgm/commonmark-hs/blob/master/commonmark-extensions/test/definition_lists.md</a>
     </p>
   
@@ -632,7 +648,7 @@ TODO: Cache these in default layer, and use them directly, rather than relying o
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.13.1
       </span>
     </div>
   </div>

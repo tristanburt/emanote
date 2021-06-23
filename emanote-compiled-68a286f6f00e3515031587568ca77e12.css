@@ -155,11 +155,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-ul, ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 .container {
   width: 100%;
 }
@@ -471,6 +466,9 @@ ul, ol {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
 .ml-4 {
   margin-left: 1rem;
 }
@@ -516,9 +514,9 @@ ul, ol {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .py-0\.5 {
   padding-top: 0.125rem;
@@ -547,9 +545,6 @@ ul, ol {
 }
 .pl-2 {
   padding-left: 0.5rem;
-}
-.pt-3 {
-  padding-top: 0.75rem;
 }
 .pt-2 {
   padding-top: 0.5rem;
