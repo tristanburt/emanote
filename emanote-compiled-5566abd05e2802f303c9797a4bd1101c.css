@@ -252,9 +252,9 @@ ul, ol {
   --tw-bg-opacity: 1;
   background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
 }
-.border-blue-400 {
+.border-blue-50 {
   --tw-border-opacity: 1;
-  border-color: rgba(96, 165, 250, var(--tw-border-opacity));
+  border-color: rgba(239, 246, 255, var(--tw-border-opacity));
 }
 .hover\:border-yellow-400:hover {
   --tw-border-opacity: 1;
@@ -264,9 +264,9 @@ ul, ol {
   --tw-border-opacity: 1;
   border-color: rgba(253, 230, 138, var(--tw-border-opacity));
 }
-.border-green-400 {
+.border-green-50 {
   --tw-border-opacity: 1;
-  border-color: rgba(52, 211, 153, var(--tw-border-opacity));
+  border-color: rgba(236, 253, 245, var(--tw-border-opacity));
 }
 .checked\:border-transparent:checked {
   border-color: transparent;
