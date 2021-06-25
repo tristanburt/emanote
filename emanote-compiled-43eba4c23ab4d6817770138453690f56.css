@@ -485,9 +485,6 @@ ul {
 .mr-2 {
   margin-right: 0.5rem;
 }
-.mt-4 {
-  margin-top: 1rem;
-}
 .hover\:opacity-80:hover {
   opacity: 0.8;
 }
@@ -732,10 +729,8 @@ ul {
   --tw-scale-y: 1;
   --tw-scale-z: 1;
 }
-.scale-90 {
+.scale-x-90 {
   --tw-scale-x: .9;
-  --tw-scale-y: .9;
-  --tw-scale-z: .9;
 }
 .-skew-y-1 {
   --tw-skew-y: -1deg;
