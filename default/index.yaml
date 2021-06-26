@@ -1,0 +1,47 @@
+# These variables are made globally available in the HTML templates.
+# Make sure that they do not conflict with HTML tag names.
+# You can override them on a per-note or per-directory basis by creating the
+# associated .yaml file.
+
+# Order is used by Emanote to determine the sidebar order of notes.
+order: 0
+
+tags: []
+
+# TODO: How to design this when generating RSS feeds?
+template:
+  # Use file "./${template.name}.tpl" to render HTML
+  name: templates/layouts/book
+  # List of available colors: https://tailwindcss.com/docs/customizing-colors
+  theme: blue
+  baseUrl: /
+  iconUrl: favicon.svg
+  sidebar:
+    # Whether this node in the sidebar tree should remain collapsed by default
+    # (unless a route in it is active)
+    collapsed: true
+
+pandoc:
+  # Rewrite the class specified in Pandoc's Div and Span nodes. You can specify the class using
+  # https://github.com/jgm/commonmark-hs/blob/master/commonmark-extensions/test/attributes.md
+  #
+  # This feature is useful when managing a "library" of CSS styling to use on
+  # Markdown text, especially when using Tailwind.
+  rewriteClass:
+    # TODO: Should these be done instead on Heist (pandoc.tpl)?
+    emanote:inline-tag: font-bold bg-gray-100 py-1 px-2 rounded-lg
+    # Broken links are wrapped in a <span> with this class. Add its tailwind style here.
+    emanote:broken-link: line-through italic
+    # You can also add your own class -> style mappings. We provide a sample below.
+    sticky-note: px-3 py-1 rounded shadow bg-yellow-100 mx-2 transform -skew-y-1 scale-95 hover:scale-100 hover:border-yellow-400 hover:shadow-lg border-t-8 border-yellow-200 mb-8 mt-8
+
+# Put page-specific metadata here. Override them in Markdown frontmatter or
+# per-folder YAML as necessary.
+page:
+  siteName: Emanote
+  siteTitle: Emanote
+  # Desription is expected to be set on a per-page basis.
+  # HACK: We are setting it to empty here, because Heist doesn't work well otherwise.
+  description: ""
+  headHtml: |
+    <!-- Add anything that should go in <head> of these routes here -->

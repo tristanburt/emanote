@@ -1,0 +1,143 @@
+cabal-version:      2.4
+name:               emanote
+version:            0.1.21.1
+license:            AGPL-3.0-only
+copyright:          2021 Sridhar Ratnakumar
+maintainer:         srid@srid.ca
+author:             Sridhar Ratnakumar
+category:           Web
+
+-- TODO: Before hackage release.
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+extra-source-files:
+  LICENSE
+  README.md
+
+data-dir:           default
+data-files:
+  _emanote-live-server/**/*.css
+  favicon.svg
+  index.md
+  index.yaml
+  templates/**/*.tpl
+
+executable emanote
+  build-depends:
+    , aeson
+    , aeson-extra
+    , async
+    , base
+    , blaze-html
+    , bytestring
+    , commonmark
+    , commonmark-extensions
+    , commonmark-pandoc
+    , containers
+    , data-default
+    , directory
+    , ema                    >=0.2
+    , filepath
+    , filepattern
+    , fsnotify
+    , heist                  >=1.1.0.1
+    , ixset-typed
+    , lens
+    , lens-aeson
+    , lvar
+    , map-syntax
+    , megaparsec
+    , monad-logger
+    , mtl
+    , neat-interpolation
+    , pandoc-link-context    >=1.0.2
+    , pandoc-types
+    , parsec
+    , profunctors
+    , relude
+    , shower
+    , tagged
+    , tagtree
+    , text
+    , time
+    , unliftio
+    , unordered-containers
+    , uri-encode
+    , with-utf8
+    , world-peace
+    , xmlhtml
+    , yaml
+
+  mixins:
+    base hiding (Prelude),
+    relude (Relude as Prelude, Relude.Container.One),
+    relude
+
+  ghc-options:
+    -Wall -Wincomplete-record-updates -Wincomplete-uni-patterns
+
+  default-extensions:
+    FlexibleContexts
+    FlexibleInstances
+    KindSignatures
+    LambdaCase
+    MultiParamTypeClasses
+    MultiWayIf
+    OverloadedStrings
+    ScopedTypeVariables
+    TupleSections
+    ViewPatterns
+
+  main-is:            Main.hs
+  hs-source-dirs:     src
+  default-language:   Haskell2010
+  autogen-modules:    Paths_emanote
+  other-modules:
+    Emanote.Model
+    Emanote.Model.Link.Rel
+    Emanote.Model.Meta
+    Emanote.Model.Note
+    Emanote.Model.Query
+    Emanote.Model.SData
+    Emanote.Model.StaticFile
+    Emanote.Model.Title
+    Emanote.Model.Type
+    Emanote.Pandoc.Filter.Embed
+    Emanote.Pandoc.Filter.Query
+    Emanote.Pandoc.Filter.Url
+    Emanote.Pandoc.Markdown.Parser
+    Emanote.Pandoc.Markdown.Syntax.HashTag
+    Emanote.Pandoc.Markdown.Syntax.WikiLink
+    Emanote.Prelude
+    Emanote.Route
+    Emanote.Route.Ext
+    Emanote.Route.ModelRoute
+    Emanote.Route.R
+    Emanote.Route.SiteRoute
+    Emanote.Route.SiteRoute.Class
+    Emanote.Route.SiteRoute.Type
+    Emanote.Source
+    Emanote.Source.Loc
+    Emanote.Source.Mount
+    Emanote.Source.Patch
+    Emanote.Source.Pattern
+    Emanote.View
+    Emanote.View.LiveServerFiles
+    Emanote.View.Template
+    Heist.Extra
+    Heist.Extra.Splices.List
+    Heist.Extra.Splices.Pandoc
+    Heist.Extra.Splices.Pandoc.Attr
+    Heist.Extra.Splices.Pandoc.Ctx
+    Heist.Extra.Splices.Pandoc.Footnotes
+    Heist.Extra.Splices.Pandoc.Render
+    Heist.Extra.Splices.Tree
+    Heist.Extra.TemplateState
+    Paths_emanote
