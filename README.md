@@ -41,7 +41,7 @@ nix-env -if https://github.com/srid/emanote/archive/refs/heads/master.tar.gz
 
 # Run live server (PORT is optional and below is an example)
 mkdir ~/notebook && cd ~/notebook
-PORT=8001 emanote -C ~/notebook
+PORT=8001 emanote
 
 # Generate static files
 mkdir /tmp/output
