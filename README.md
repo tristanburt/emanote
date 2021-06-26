@@ -25,8 +25,9 @@ cachix use srid
 
 ## Installing NixOS on MacOS
 
+Starting in macOS 10.15 (Catalina) the root filesystem is read-only. It will need an unencrypted APFS volume created to house the NixOS install
+
 ```bash
-# Starting in macOS 10.15 (Catalina) the root filesystem is read-only. It will need an unencrypted APFS volume created to house the NixOS install
 sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
 ```
 There are alternative [install](https://nixos.org/manual/nix/stable/#sect-macos-installation) methods but the unencrypted APFS volume is the most straight forward.
